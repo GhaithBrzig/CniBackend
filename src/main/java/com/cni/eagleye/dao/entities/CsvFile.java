@@ -19,22 +19,34 @@ import java.util.Date;
 public class CsvFile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idCsv")
-    private Integer idCsv; // Clé primaire
-    private Date date;
-    private String eNodeBName;
-    private String cellFDDTDDIndication;
-    private String cellName;
+    @Column(name = "idEmp")
+    private Long id;
 
-    private float rRCConnectionSuccess;
-    private float rRCConnectionAttempt;
-    private float eRAbAbnormalRelease;
-    private float eRAbRelease;
-    private float intraFreqSuccess;
-    private float intraFreqAttempt;
-    private float cellTrafficVolume;
-    private float cellTransferTime;
-    private float avgUserNum;
-
+    private int matricule;
+    private int mois;
+    private int annee;
+    private int type_paie;
+    private int codind;
+    private double montant_ind;
+    private int nature_ind;
+    private int grd;
+    private int cat;
+    private int corps;
+    private int codfam;
+    private int codsfam;
+    private int indice;
+    private int nature;
+    private int fonc;
+    private int dire;
+    private int sdir;
+    private int serv;
+    private int centreg;
+    private int gouv;
+    private int gouvn;
+    private int natorg;
+    private int budg;
+    private int sitfam;
+    private int sexe;
+    private double montant_ind_masse_salariale;
 
 }

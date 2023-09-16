@@ -27,7 +27,7 @@ public class Helper {
 
         try {
             XSSFWorkbook workbook = new XSSFWorkbook(is);
-            XSSFSheet sheet = workbook.getSheet("Sheet1");
+            XSSFSheet sheet = workbook.getSheet("Feuil1");
             int rowNumber = 0;
             Iterator<Row> iterator = sheet.iterator();
 
@@ -45,68 +45,133 @@ public class Helper {
                         switch (cid) {
                             case 0:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setDate(cell.getDateCellValue());
+                                    p.setMatricule((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 1:
-                                if (cell.getCellType() == CellType.STRING) {
-                                    p.setENodeBName(cell.getStringCellValue());
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setMois((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 2:
-                                if (cell.getCellType() == CellType.STRING) {
-                                    p.setCellFDDTDDIndication(cell.getStringCellValue());
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setAnnee((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 3:
-                                if (cell.getCellType() == CellType.STRING) {
-                                    p.setCellName(cell.getStringCellValue());
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setType_paie((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 4:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setRRCConnectionSuccess((float) cell.getNumericCellValue());
+                                    p.setCodind((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 5:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setRRCConnectionAttempt(((float) cell.getNumericCellValue()));
+                                    p.setMontant_ind((float) cell.getNumericCellValue());
                                 }
                                 break;
                                 
                             case 6:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setERAbAbnormalRelease((float) cell.getNumericCellValue());
+                                    p.setNature_ind((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 7:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setERAbRelease((float) cell.getNumericCellValue());
+                                    p.setGrd((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 8:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setIntraFreqSuccess((float) cell.getNumericCellValue());
+                                    p.setCat((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 9:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setIntraFreqAttempt((float) cell.getNumericCellValue());
+                                    p.setCorps((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 10:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setCellTrafficVolume((float) cell.getNumericCellValue());
+                                    p.setCodfam((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 11:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setCellTransferTime((float) cell.getNumericCellValue());
+                                    p.setCodsfam((int) cell.getNumericCellValue());
                                 }
                                 break;
                             case 12:
                                 if (cell.getCellType() == CellType.NUMERIC) {
-                                    p.setAvgUserNum((float) cell.getNumericCellValue());
+                                    p.setIndice((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 13:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setNature((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 14:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setFonc((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 15:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setDire((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 16:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setSdir((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 17:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setServ((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 18:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setCentreg((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 19:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setGouv((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 20:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setGouvn((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 21:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setNatorg((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 22:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setBudg((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 23:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setSitfam((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 24:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setSexe((int) cell.getNumericCellValue());
+                                }
+                                break;
+                            case 25:
+                                if (cell.getCellType() == CellType.NUMERIC) {
+                                    p.setMontant_ind_masse_salariale((float) cell.getNumericCellValue());
                                 }
                                 break;
                             default:
